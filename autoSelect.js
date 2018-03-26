@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    $('.wait').remove();
 
     var _brand = '#brand';
     var _soket = '#soket';
@@ -89,7 +88,7 @@ $(document).ready(function(){
         $(_price).children('option:not([value = 0])').remove();
         $(_price).val(price_obj[model]);
     });
-   
+    //Элементы корзины ---------------------------------------------------
     var c = 0;
     $('#priceAll').val(function(){
         $.each(cart, function (key, val) {
