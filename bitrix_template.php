@@ -136,14 +136,8 @@ $active = ['active' => 'active', 'true' => 'true'];
                         $sectElem[] = $product[$i];
                     }else continue;
                 }
-                for($i=0; $i<count($sectElem); $i++):
-                    if ($i < 8)$page = 1;
-                    else if($i >= 8 && $i < 16) $page = 2;
-                    else if($i >= 16 && $i < 24) $page = 3;
-                    else if($i >= 24 && $i < 32) $page = 4;
-                    else if($i >= 32 && $i < 40) $page = 5;
-                    ?>
-                    <div class="row sec-menu-item s-it" id="<?=$this->GetEditAreaId($sectElem[$i]['ID'])?>" data-index-menu="1" data-page-menu="0" data-page-list="<?=$page?>">
+                for($i=0; $i<count($sectElem); $i++):?>
+                    <div class="row sec-menu-item s-it" id="<?=$this->GetEditAreaId($sectElem[$i]['ID'])?>">
                         <div class="col-md-4">
                             <div class="smcont-desc pmp-tc-title">
                                 <h1 class=""><?= $sectElem[$i]['NAME'] ?></h1>
