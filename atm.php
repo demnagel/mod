@@ -2,19 +2,19 @@
 include ('atmCell_set.php');
 include ('atmCell_get.php');
 
-
+// Банкомат
 class ATM
 {
     use atmCell_set;
     use atmCell_get;
-
+    // количество купюр в ячейке
     private $r50 = 50;
     private $r100 = 20;
     private $r500 = 10;
     private $r1000 = 20;
     private $r2000 = 10;
     private $r5000 = 0;
-
+    // процент купюр при автозагрузке
     private $r50p;
     private $r100p = 5;
     private $r500p = 20;
@@ -29,7 +29,7 @@ class ATM
     {
         return $this->balance;
     }
-
+    // Загрузка с автораспределением по ячейкам
     public function autoLoad($summ)
     {
        if(!self::chekSumm($summ)){
@@ -78,7 +78,7 @@ class ATM
            return $arr;
        }
     }
-
+    // Выдача купюр минимальным колличеством
     public function getSumm($summ)
     {
         $summStart = $summ;
