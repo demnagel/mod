@@ -30,7 +30,8 @@ class ATM
         return $this->balance;
     }
 
-    public function autoLoad($summ){
+    public function autoLoad($summ)
+    {
        if(!self::chekSumm($summ)){
            return false;
        }
@@ -128,19 +129,6 @@ class ATM
         }
         else return true;
     }
-
-
-
 }
-$r = new ATM;
-//echo $r->get(100);
-echo '<br>';
-try {
-    //print_r($r->autoLoad(1500050));
-    print_r($r->getSumm(12250));
 
-}
-catch (Exception $e) {
-    echo $e->getMessage(), "\n";
-}
 
