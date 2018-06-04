@@ -14,11 +14,9 @@
             var r = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
             return r.test(this.value);
         },
-
         'ruleRequared':function() {
             return this.value !== '';
         },
-
         'ruleCharCount':function() {
             var r = /.{2,}/;
             return r.test(this.value);
