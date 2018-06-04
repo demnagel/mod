@@ -1,6 +1,4 @@
 ﻿<?php
-namespace gvozdikov;
-
 class ParseXML
 {
     protected $xmlDOM;
