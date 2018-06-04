@@ -24,7 +24,8 @@ class ParseXML
     }
 
 
-    public function read($table, array $listColumn){
+    public function read($table, array $listColumn)
+    {
         $queryTable = "//table[@name='$table']";
         $res = $this->xpath->query($queryTable);
         if($res['length'] == 0){
@@ -113,7 +114,8 @@ class ParseXML
     }
 
 
-    public function suggest( array $nameField ){
+    public function suggest( array $nameField )
+    {
         $suggest =[];
         for($i = 0; $i < count($nameField); $i++){
             $arr = $this->object[$nameField[$i]];
