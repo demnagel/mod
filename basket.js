@@ -12,7 +12,7 @@ $(document).ready(function () {
                 var resSumm = 0;  // стартовая итоговая сумма
                 $.each(msg,function(name,value){
                     var wp = {};
-                    var arr_weight = [];// все доступных порций для товара
+                    var arr_weight = [];// вес доступных порций для товара
                     var arr_price = []; // цены для доступных порций
                     var cart = '';      // рендер товара в корзине
                     var dropDown = '';  // рендер доступных порций
@@ -24,6 +24,7 @@ $(document).ready(function () {
                             if(key == 'WEIGHT'){
                                 weight = val[0]
                                 var i = 0;
+                                // Сборка dropdown
                                 $.each(val, function (k, weight) {
                                     dropDown += "<option class='dropdown-item'>" + weight + "</option>";
                                     arr_weight.push(weight);
