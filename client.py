@@ -12,7 +12,7 @@ import os
 
 class Ammo:
 
-    supdomen = 'vfnd'
+    supdomen = 'subdomen'
     headers = {'user-agent': 'amoCRM-API-client/1.0', 'content-type': 'application/json'}
     upd_errors = 'update_errors.txt'
     auth_data = {}
